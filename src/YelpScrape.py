@@ -52,12 +52,7 @@ def YelpScraper(uri):
     #plt.xticks(rotation=90)
     #plt.plot(reviewDF)
 
-    comprehend = boto3.client(
-        service_name='comprehend',
-        aws_access_key_id='AKIAIBIMJEFTF6E5F3YQ',
-        aws_secret_access_key='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',
-        region_name='us-east-1'
-    )
+
     for r in reviewList:
         reviewSentiment.append(comprehend.detect_sentiment(Text=r, LanguageCode='en'))
 
