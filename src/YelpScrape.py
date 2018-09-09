@@ -3,7 +3,7 @@ import requests, pandas, numpy, matplotlib.pyplot as plt, re, boto3
 from bs4 import BeautifulSoup
 
 #uri = "https://www.yelp.com/biz/renewal-charlottesville-2"
-def lambda_handler(uri):
+def YelpScraper(uri):
     soupBowl = []
     uriList = []
     rawList = []
